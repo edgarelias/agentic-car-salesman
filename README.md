@@ -31,21 +31,22 @@ Create a `.env` file in the project root:
 # Django
 DJANGO_SECRET_KEY=your_django_secret_key
 DJANGO_DEBUG=True
-DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
+DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,https://abcd1234.ngrok.io
 
 # Database (Postgres)
-POSTGRES_DB=agentdb
-POSTGRES_USER=agentuser
-POSTGRES_PASSWORD=secret
+postgres_db=agentdb
+postgres_user=agentuser
+postgres_password=secret
+postgres_host=db
+postgres_port=5432
 
 # Twilio
 TWILIO_ACCOUNT_SID=ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 TWILIO_AUTH_TOKEN=your_auth_token
-TWILIO_WHATSAPP_NUMBER=whatsapp:+14155238886
+TWILIO_WHATSAPP_NUMBER=+14155238886
 
 # OpenAI
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-OPENAI_DEFAULT_MODEL=gpt-4-turbo
 
 # (Optional) Redis URL
 REDIS_URL=redis://redis:6379/0
@@ -127,3 +128,7 @@ docker-compose exec web python manage.py migrate catalog zero
 docker-compose exec web python manage.py makemigrations catalog
 docker-compose exec web python manage.py migrate catalog
 ```
+
+### Demo
+Video: https://1drv.ms/v/c/d97b815d286fe43f/EavLDz_aU1pDjRt8s1igfLMBJlfM-ivPjroPxRX-1eozcw?e=cThxeJ
+
